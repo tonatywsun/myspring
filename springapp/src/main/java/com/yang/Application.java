@@ -5,7 +5,7 @@ import com.yang.entry.Teacher;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * @Description: TODO
+ * @Description: Application
  * @Author: tona.sun
  * @Date: 2019/12/10 14:39
  */

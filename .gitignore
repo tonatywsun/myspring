@@ -1,2 +1,4 @@
 # Project exclude paths
-/springapp/target/
+.idea
+*.iml
+target
