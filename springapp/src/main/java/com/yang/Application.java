@@ -17,5 +17,12 @@ public class Application {
         //ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("application.xml");
         Teacher teacher = (Teacher) annotationConfigApplicationContext.getBean("teacher");
         System.out.println(teacher);
+
+        System.out.println(annotationConfigApplicationContext.getBean("a").hashCode());
+        System.out.println(annotationConfigApplicationContext.getBean("a").hashCode());
+        System.out.println(annotationConfigApplicationContext.getBean("a").hashCode());
+        System.out.println(annotationConfigApplicationContext.getBean("b"));
+        System.out.println(annotationConfigApplicationContext.getBean("b"));
+        System.out.println(annotationConfigApplicationContext.getBean("b"));
     }
 }
