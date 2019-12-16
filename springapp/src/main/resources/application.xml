@@ -11,7 +11,7 @@
     <!--<context:component-scan base-package="com.yang"/>-->
     <!--  autowire-candidate="false"自动装配中排除一个bean 该autowire-candidate属性旨在仅影响基于类型的自动装配。
     它不会影响按名称显示的显式引用，即使指定的Bean未标记为自动装配候选，该名称也可得到解析。因此，如果名称匹配，按名称自动装配仍然会注入Bean-->
-    <bean id="student1" class="com.yang.entry.Student" ><!--autowire-candidate="false"-->
+    <bean id="student1" class="com.yang.ioc.entry.Student" ><!--autowire-candidate="false"-->
         <constructor-arg value="20"/>
         <property name="name" value="yang"/>
     </bean>

@@ -1,7 +1,6 @@
-package com.yang.conf;
+package com.yang.ioc.conf;
 
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.FilterType;
 import org.springframework.context.annotation.ImportResource;
 
 /**
@@ -10,7 +9,7 @@ import org.springframework.context.annotation.ImportResource;
  * @Date: 2019/12/10 16:40
  */
 //扫描注解
-@ComponentScan(value = "com.yang"
+@ComponentScan(value = "com.yang.ioc"
         /*,excludeFilters = @ComponentScan.Filter(type= FilterType.REGEX,pattern ="com.yang.entry.scop.*" )*/)
 //引用xml中的配置，实现注解 xml 和java配置类三种并存配置，只是自己测试玩玩而已
 @ImportResource("classpath:application.xml")

@@ -1,7 +1,7 @@
-package com.yang;
+package com.yang.ioc;
 
-import com.yang.conf.ComponentScanConf;
-import com.yang.entry.Teacher;
+import com.yang.ioc.conf.ComponentScanConf;
+import com.yang.ioc.entry.Teacher;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**

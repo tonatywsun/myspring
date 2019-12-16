@@ -1,4 +1,4 @@
-package com.yang.entry.scop;
+package com.yang.ioc.entry.scop;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;

@@ -1,4 +1,4 @@
-package com.yang.entry.scop;
+package com.yang.ioc.entry.scop;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

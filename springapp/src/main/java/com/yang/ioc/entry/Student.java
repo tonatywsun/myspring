@@ -1,4 +1,4 @@
-package com.yang.entry;
+package com.yang.ioc.entry;
 
 import lombok.Data;
 import lombok.ToString;
@@ -11,6 +11,7 @@ import lombok.ToString;
 //@Component("student")
 @Data
 @ToString
+//@Profile("dev") 指定环境可以访问到
 public class Student {
     public Student() {
     }
