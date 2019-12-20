@@ -11,6 +11,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 public class Application {
     public static void main(String[] args) {
+        System.getProperties().put("jdk.proxy.ProxyGenerator.saveGeneratedFiles", "true");
         //加载配置类,具有解析注解功能，已经不需要开启了
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(ComponentScanConf.class);
         //加载xml
@@ -18,11 +19,11 @@ public class Application {
         Teacher teacher = (Teacher) annotationConfigApplicationContext.getBean("teacher");
         System.out.println(teacher);
 
-        System.out.println(annotationConfigApplicationContext.getBean("a").hashCode());
+     /*   System.out.println(annotationConfigApplicationContext.getBean("a").hashCode());
         System.out.println(annotationConfigApplicationContext.getBean("a").hashCode());
         System.out.println(annotationConfigApplicationContext.getBean("a").hashCode());
         System.out.println(annotationConfigApplicationContext.getBean("b"));
         System.out.println(annotationConfigApplicationContext.getBean("b"));
-        System.out.println(annotationConfigApplicationContext.getBean("b"));
+        System.out.println(annotationConfigApplicationContext.getBean("b"));*/
     }
 }

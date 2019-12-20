@@ -4,9 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import javax.annotation.Resource;
 
 
 /**
@@ -20,7 +19,7 @@ import javax.annotation.Resource;
 @NoArgsConstructor
 @Component("teacher")
 public class Teacher {
-    @Resource    //byName-->byType
-    //@Autowired //byType
+    //@Resource    //byName-->byType
+    @Autowired //byType
     private Student student;
 }

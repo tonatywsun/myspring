@@ -7,7 +7,9 @@ package com.yang.aop.conf;
  */
 
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @ComponentScan(value = "com.yang.aop")
+@EnableAspectJAutoProxy(proxyTargetClass = true)
 public class AopComponentScanConf {
 }
