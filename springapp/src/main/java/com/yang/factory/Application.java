@@ -22,6 +22,7 @@ public class Application {
         IUserDao userDao = (IUserDao) annotationConfigApplicationContext.getBean("myFactoryBean");
         IUserDao userDao2 = (IUserDao) annotationConfigApplicationContext.getBean("myFactoryBean");
         FactoryBean myFactoryBean = (FactoryBean) annotationConfigApplicationContext.getBean("&myFactoryBean");
+        //myFactoryBean.getObject()和正常方法调用一样
         System.out.println(userDao.equals(myFactoryBean.getObject()));
         System.out.println(userDao.equals(userDao2));
     }

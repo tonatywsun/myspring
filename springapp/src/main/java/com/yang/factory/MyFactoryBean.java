@@ -14,8 +14,13 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class MyFactoryBean implements FactoryBean<IUserDao> {
+    IUserDao userDao;
+
     @Override
     public IUserDao getObject() throws Exception {
+        /*if (userDao == null) {
+            userDao = new UserDaoImpl();
+        }*/
         return new UserDaoImpl();
     }
 
