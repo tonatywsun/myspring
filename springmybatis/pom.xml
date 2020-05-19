@@ -15,13 +15,13 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>5.2.6.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <!-- 数据库连接池 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>5.2.6.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <!-- mybatis core -->
         <dependency>
@@ -47,6 +47,18 @@
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.68</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.guicedee.services/sl4j -->
+       <!-- <dependency>
+            <groupId>com.guicedee.services</groupId>
+            <artifactId>sl4j</artifactId>
+            <version>1.0.9.10-jre14</version>
+        </dependency>-->
+
     </dependencies>
 
 </project>

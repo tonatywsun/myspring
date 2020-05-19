@@ -2,6 +2,7 @@ package com.yang;
 
 import com.yang.Services.CityService;
 import com.yang.conf.DataSourceConfig;
+import com.yang.conf.MyLog;
 import com.yang.dao.entry.City;
 import org.apache.ibatis.logging.LogFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -17,7 +18,9 @@ import java.util.List;
 public class Application {
     public static void main(String[] args) {
         //指定使用日志
-        LogFactory.useLog4JLogging();
+        //LogFactory.useLog4JLogging();
+        //使用自己写的日志类
+        LogFactory.useCustomLogging(MyLog.class);
         AnnotationConfigApplicationContext annotationConfigApplicationContext
                 = new AnnotationConfigApplicationContext(DataSourceConfig.class);
         annotationConfigApplicationContext.start();
@@ -26,6 +29,5 @@ public class Application {
         //mapper加@CacheNamespace注解可开启二级缓存，但是city要实现序列化
         List<City> cities = cityService.selectAllCity();
         List<City> cities2 = cityService.selectAllCity();
-        System.out.println(cities.size());
     }
 }

@@ -20,7 +20,6 @@ public class CityServiceImpl implements CityService {
 
     @Override
     public List<City> selectAllCity() {
-        //LogFactory.useLog4JLogging();
         return cityMapper.selectAll();
     }
 }
