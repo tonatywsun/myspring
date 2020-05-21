@@ -22,4 +22,9 @@ public class CityServiceImpl implements CityService {
     public List<City> selectAllCity() {
         return cityMapper.selectAll();
     }
+
+    @Override
+    public City selectById(Integer id) {
+        return cityMapper.selectById(id);
+    }
 }

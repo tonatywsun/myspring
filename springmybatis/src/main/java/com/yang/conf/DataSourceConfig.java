@@ -14,7 +14,7 @@ import javax.sql.DataSource;
 @MapperScan("com.yang.dao.mapper")
 public class DataSourceConfig {
 
-    @Bean
+   // @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setPassword("ssss1111");

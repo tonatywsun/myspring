@@ -11,4 +11,6 @@ import java.util.List;
  */
 public interface CityService {
     List<City> selectAllCity();
+
+    City selectById(Integer id);
 }

@@ -20,6 +20,7 @@ public class Application {
         //指定使用日志
         //LogFactory.useLog4JLogging();
         //使用自己写的日志类
+        System.getProperties().put("jdk.proxy.ProxyGenerator.saveGeneratedFiles", "true");
         LogFactory.useCustomLogging(MyLog.class);
         AnnotationConfigApplicationContext annotationConfigApplicationContext
                 = new AnnotationConfigApplicationContext(DataSourceConfig.class);
@@ -29,5 +30,7 @@ public class Application {
         //mapper加@CacheNamespace注解可开启二级缓存，但是city要实现序列化
         List<City> cities = cityService.selectAllCity();
         List<City> cities2 = cityService.selectAllCity();
+        City city = cityService.selectById(1);
+        System.out.println(city);
     }
 }
