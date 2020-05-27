@@ -14,7 +14,7 @@ import javax.sql.DataSource;
 @MapperScan("com.yang.dao.mapper")
 public class DataSourceConfig {
 
-   // @Bean
+    // @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setPassword("ssss1111");
@@ -29,7 +29,7 @@ public class DataSourceConfig {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dataSource());
         //使用注解 这个不用了
-        /*Resource[] resources = new PathMatchingResourcePatternResolver().getResources("classpath:/mappers/*.xml");
+       /* Resource[] resources = new PathMatchingResourcePatternResolver().getResources("classpath:/mappers/*.xml");
         factoryBean.setMapperLocations(resources);*/
         //设置使用Log4j日志
         /*org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();

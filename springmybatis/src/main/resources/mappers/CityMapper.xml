@@ -4,4 +4,12 @@
     <select id="selectAll" resultType="com.yang.dao.entry.City">
         select * from t_city
     </select>
+    <select id="selectById" resultType="com.yang.dao.entry.City">
+        select * from t_city
+        <where>
+            <if test="id!=null">
+                id=#{id}
+            </if>
+        </where>
+    </select>
 </mapper>

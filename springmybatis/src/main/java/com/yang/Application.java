@@ -25,6 +25,9 @@ public class Application {
         AnnotationConfigApplicationContext annotationConfigApplicationContext
                 = new AnnotationConfigApplicationContext(DataSourceConfig.class);
         annotationConfigApplicationContext.start();
+        /*//配合TestBeanPostProcessor测试自动注入
+        TestService testService = annotationConfigApplicationContext.getBean(TestService.class);
+        System.out.println(testService.getCityService());*/
         CityService cityService = annotationConfigApplicationContext.getBean(CityService.class);
         //两次查询打印两条sql，mybatis集成spring一级缓存失效，执行两次sql
         //mapper加@CacheNamespace注解可开启二级缓存，但是city要实现序列化
@@ -32,5 +35,6 @@ public class Application {
         List<City> cities2 = cityService.selectAllCity();
         City city = cityService.selectById(1);
         System.out.println(city);
+
     }
 }
